@@ -36,7 +36,6 @@ app.post('/accept-payment', (req, res) => {
   });
 
   charge.then(result => {
-      throw new Error("this didn't work")
       res.json(result)
     })
     .catch(err => {
